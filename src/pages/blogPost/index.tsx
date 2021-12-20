@@ -1,4 +1,4 @@
-import { Flex, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 
 import { IPostRes } from "../../interfaces";
 
@@ -26,11 +26,13 @@ export const PageBlogPost = ({ post }: { post: IPostRes }) => {
           </HStack>
         </HStack>
 
-        <HStack w="full" justify="flex-start">
+        <VStack w="full" justify="flex-start" align="flex-start">
           <Text fontWeight="bold" fontSize="xl">
             {post.title.rendered}
           </Text>
-        </HStack>
+
+          <Box dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+        </VStack>
       </VStack>
     </Flex>
   );
