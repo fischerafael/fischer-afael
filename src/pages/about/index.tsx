@@ -1,4 +1,5 @@
 import { Avatar, Flex, HStack, Text, VStack } from "@chakra-ui/react";
+import { Header } from "../../components/organisms/Header";
 
 export const PageAbout = () => {
   return (
@@ -13,16 +14,7 @@ export const PageAbout = () => {
       pb="8"
     >
       <VStack w="full" maxW="container.md" h="full" spacing={8}>
-        <HStack w="full" justify="space-between" h="15vh">
-          <Text>
-            <b>fischer</b>afael
-          </Text>
-          <HStack spacing="8">
-            <Text>Home</Text>
-            <Text>Blog</Text>
-            <Text>About</Text>
-          </HStack>
-        </HStack>
+        <Header />
 
         <HStack w="full" spacing="8" bg="gray.800" p="8">
           <Avatar

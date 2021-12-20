@@ -1,5 +1,6 @@
 import { Avatar, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { Header } from "../../components/organisms/Header";
 import { IPostRes } from "../../interfaces";
 
 export const PageBlog = ({ posts }: { posts: IPostRes[] }) => {
@@ -15,17 +16,7 @@ export const PageBlog = ({ posts }: { posts: IPostRes[] }) => {
       pb="8"
     >
       <VStack w="full" maxW="container.md" h="full" spacing={8}>
-        <HStack w="full" justify="space-between" h="15vh">
-          <Text>
-            <b>fischer</b>afael
-          </Text>
-          <HStack spacing="8">
-            <Text>Home</Text>
-            <Text>Blog</Text>
-            <Text>About</Text>
-          </HStack>
-        </HStack>
-
+        <Header />
         <HStack w="full" justify="flex-start">
           <Text fontWeight="bold" fontSize="xl">
             Blog
