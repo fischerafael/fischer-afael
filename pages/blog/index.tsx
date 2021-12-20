@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { IPostRes } from "../../src/interfaces";
 import { PageBlog } from "../../src/pages/blog";
 

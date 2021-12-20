@@ -1,4 +1,5 @@
 import { Avatar, Flex, HStack, Text, VStack } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { IPostRes } from "../../interfaces";
 
 export const PageBlog = ({ posts }: { posts: IPostRes[] }) => {
@@ -36,6 +37,7 @@ export const PageBlog = ({ posts }: { posts: IPostRes[] }) => {
             key={post.id}
             postTitle={post.title.rendered}
             date={post.date}
+            slug={post.slug}
           />
         ))}
       </VStack>
@@ -45,11 +47,12 @@ export const PageBlog = ({ posts }: { posts: IPostRes[] }) => {
 
 interface IBlogCard {
   postTitle: string;
-
+  slug: string;
   date: string;
 }
 
-const BlogCard = ({ postTitle, date }: IBlogCard) => {
+const BlogCard = ({ postTitle, date, slug }: IBlogCard) => {
+  const { push } = useRouter();
   return (
     <HStack
       w="full"
@@ -57,6 +60,7 @@ const BlogCard = ({ postTitle, date }: IBlogCard) => {
       p="8"
       spacing="8"
       _hover={{ shadow: "xl", cursor: "pointer" }}
+      onClick={() => push(`/blog/${slug}`)}
     >
       <Avatar bg="cyan.500" name={postTitle} color="white" size="lg" />
       <VStack spacing="0" w="full" align="flex-start">
