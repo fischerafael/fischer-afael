@@ -1,9 +1,12 @@
 import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import { Header } from "../../components/organisms/Header";
+import html from "./html.module.scss";
 
 import { IPostRes } from "../../interfaces";
 
 export const PageBlogPost = ({ post }: { post: IPostRes }) => {
+  console.log("POST ", post);
+
   return (
     <Flex
       w="full"
@@ -23,7 +26,10 @@ export const PageBlogPost = ({ post }: { post: IPostRes }) => {
             {post.title.rendered}
           </Text>
 
-          <Box dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          <Box
+            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            className={html.div}
+          />
         </VStack>
       </VStack>
     </Flex>
