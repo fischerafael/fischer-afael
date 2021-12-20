@@ -1,9 +1,10 @@
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { IPostRes } from "../../../src/interfaces";
+import { PageBlogPost } from "../../../src/pages/blogPost";
 
 const index = ({ post }: { post: IPostRes }) => {
-  return <div>{post.title.rendered}</div>;
+  return <PageBlogPost post={post} />;
 };
 
 export default index;
