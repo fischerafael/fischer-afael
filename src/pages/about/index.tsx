@@ -175,6 +175,35 @@ export const PageAbout = () => {
             </Text>
           ))}
         </HStack>
+
+        <HStack w="full" justify="flex-start">
+          <Text fontWeight="bold" fontSize="xl">
+            Prizes & Misc.
+          </Text>
+        </HStack>
+
+        <VStack w="full" bg="gray.800" p="8" spacing="8">
+          <ExperienceCard
+            name="Imersão React Winner"
+            company="Won the first prize of Imersão React by Alura"
+            date="2021"
+          />
+          <ExperienceCard
+            name="Tech Youtuber"
+            company="Created a Youtube chanel to share content about development and design. Posted over 200 videos and got over 1k subscribers."
+            date="2021 - currently"
+          />
+          <ExperienceCard
+            name="Net Zero School"
+            company="Won the second prize of a net zero building competition, presenting the project of a school at the National Renewable Energy Laboratory, in Golden, Colorado."
+            date="2019"
+          />
+          <ExperienceCard
+            name="Brazilian Scientific Base In Antartica"
+            company="Participated on the design of the new brazilian scientific base, built in Antartica"
+            date="2013"
+          />
+        </VStack>
       </VStack>
     </Flex>
   );
