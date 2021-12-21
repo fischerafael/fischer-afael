@@ -1,6 +1,6 @@
 import { HStack, IconButton } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube, FaGithub } from "react-icons/fa";
 
 export const SocialLinks = () => {
   const { push } = useRouter();
@@ -9,6 +9,14 @@ export const SocialLinks = () => {
   };
   return (
     <HStack w="full" justify="center" spacing="4" h="20vh">
+      <IconButton
+        aria-label="Rafael's Github"
+        icon={<FaGithub size="md" />}
+        variant="ghost"
+        color="cyan.500"
+        onClick={() => onNavigateTo("https://github.com/fischerafael")}
+      />
+
       <IconButton
         aria-label="Rafael's Linkedin"
         icon={<FaLinkedin size="md" />}
