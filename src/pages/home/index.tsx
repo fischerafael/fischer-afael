@@ -40,13 +40,13 @@ export const PageHome = ({ posts }: { posts: IPostRes[] }) => {
           py="8"
         >
           <VStack spacing="0" w="full" align="left">
-            <Text fontWeight="bold" fontSize="7xl" color="cyan.500">
+            <Text fontWeight="bold" fontSize={["5xl", "7xl"]} color="cyan.500">
               Front-End &
             </Text>
-            <Text fontWeight="bold" fontSize="7xl">
+            <Text fontWeight="bold" fontSize={["5xl", "7xl"]}>
               UX Design &
             </Text>
-            <Text fontWeight="bold" fontSize="7xl">
+            <Text fontWeight="bold" fontSize={["5xl", "7xl"]}>
               UI Design.
             </Text>
           </VStack>
