@@ -98,7 +98,7 @@ export const PageHome = () => {
             </Text>
           </HStack>
 
-          <SimpleGrid w="full" columns={2} maxW="container.sm" gap="8">
+          <SimpleGrid w="full" columns={[1, 2]} maxW="container.sm" gap="8">
             <FeatureCard
               number="01"
               title="Front-End Development"
@@ -121,7 +121,7 @@ export const PageHome = () => {
             <FeatureCard
               number="04"
               title="Back-End Development"
-              description="Even though my focus is Front-End & Design, I can develop lightweight and secure API's - or use a CMSs - to serve data to front-end applications."
+              description="Even though my focus is Front-End & Design, I can develop lightweight and secure API's (NodeJS + Typescript) - or use a CMSs - to serve data to front-end applications."
             />
           </SimpleGrid>
         </VStack>
