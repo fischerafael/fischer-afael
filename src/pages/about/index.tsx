@@ -1,5 +1,6 @@
 import { Avatar, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import { Header } from "../../components/organisms/Header";
+import { SocialLinks } from "../../components/organisms/SocialLinks";
 
 const tech = [
   { id: 1, name: "TypeScript", type: "tech" },
@@ -204,6 +205,8 @@ export const PageAbout = () => {
             date="2013"
           />
         </VStack>
+
+        <SocialLinks />
       </VStack>
     </Flex>
   );

@@ -11,13 +11,9 @@ import { useRouter } from "next/router";
 import { Header } from "../../components/organisms/Header";
 import { IPostRes } from "../../interfaces";
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { SocialLinks } from "../../components/organisms/SocialLinks";
 
 export const PageHome = () => {
-  const { push } = useRouter();
-  const onNavigateTo = (url: string) => {
-    push(url);
-  };
-
   return (
     <Flex
       w="full"
@@ -57,39 +53,7 @@ export const PageHome = () => {
           </Text>
         </VStack>
 
-        <HStack w="full" justify="center" spacing="4" h="20vh">
-          <IconButton
-            aria-label="Rafael's Linkedin"
-            icon={<FaLinkedin size="md" />}
-            variant="ghost"
-            color="cyan.500"
-            onClick={() =>
-              onNavigateTo("https://www.linkedin.com/in/fischerafael/")
-            }
-          />
-
-          <IconButton
-            aria-label="Rafael's Instagram"
-            icon={<FaInstagram size="md" />}
-            variant="ghost"
-            color="cyan.500"
-            onClick={() =>
-              onNavigateTo("https://www.instagram.com/fischerafael/")
-            }
-          />
-
-          <IconButton
-            aria-label="Rafael's Youtube"
-            icon={<FaYoutube size="md" />}
-            variant="ghost"
-            color="cyan.500"
-            onClick={() =>
-              onNavigateTo(
-                "https://www.youtube.com/channel/UCz75xXTimMhZkbK__XOM8hQ"
-              )
-            }
-          />
-        </HStack>
+        <SocialLinks />
 
         <VStack w="full" spacing="16" maxW="container.sm">
           <HStack w="full" justify="flex-start">
