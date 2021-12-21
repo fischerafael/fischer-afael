@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider>
       <Head>
         <title>Fischer - Frontend Developer, UX & UI Designer</title>
+        <link rel="shortcut icon" href="/fr.svg" />
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>

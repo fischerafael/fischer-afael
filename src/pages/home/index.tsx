@@ -3,6 +3,7 @@ import {
   Flex,
   HStack,
   IconButton,
+  SimpleGrid,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -44,10 +45,10 @@ export const PageHome = () => {
               Front-End &
             </Text>
             <Text fontWeight="bold" fontSize={["5xl", "7xl"]}>
-              UX Design &
+              UI Design &
             </Text>
             <Text fontWeight="bold" fontSize={["5xl", "7xl"]}>
-              UI Design.
+              UX Design.
             </Text>
           </VStack>
           <Text fontSize="lg">
@@ -89,36 +90,64 @@ export const PageHome = () => {
             }
           />
         </HStack>
+
+        <VStack w="full" spacing="16" maxW="container.sm">
+          <HStack w="full" justify="flex-start">
+            <Text fontWeight="bold" fontSize="4xl">
+              How I can help you
+            </Text>
+          </HStack>
+
+          <SimpleGrid w="full" columns={2} maxW="container.sm" gap="8">
+            <FeatureCard
+              number="01"
+              title="Front-End Development"
+              description="Modern and fast web applications with technologies such as
+        React, Typescript & NextJS."
+            />
+
+            <FeatureCard
+              number="02"
+              title="UI Design"
+              description="Beautiful and good-looking interfaces, designed with tools such as Figma, Indesign, Illustrator, and Photoshop."
+            />
+
+            <FeatureCard
+              number="03"
+              title="UX Design"
+              description="Amazing experiences and easy-to-use products conceived applying state-of-art frameworks such as Design Thinking & Design Sprint."
+            />
+
+            <FeatureCard
+              number="04"
+              title="Back-End Development"
+              description="Even though my focus is Front-End & Design, I can develop lightweight and secure API's - or use a CMSs - to serve data to front-end applications."
+            />
+          </SimpleGrid>
+        </VStack>
       </VStack>
     </Flex>
   );
 };
 
-interface IBlogCard {
-  postTitle: string;
-  slug: string;
-  date: string;
-}
-
-const BlogCard = ({ postTitle, date, slug }: IBlogCard) => {
-  const { push } = useRouter();
+const FeatureCard = ({
+  number,
+  title,
+  description,
+}: {
+  number: string;
+  title: string;
+  description: string;
+}) => {
   return (
-    <HStack
-      w="full"
-      bg="gray.800"
-      p="8"
-      spacing="8"
-      _hover={{ shadow: "xl", cursor: "pointer" }}
-      onClick={() => push(`/blog/${slug}`)}
-    >
-      <Avatar bg="cyan.500" name={postTitle} color="white" size="lg" />
-      <VStack spacing="0" w="full" align="flex-start">
-        <Text fontWeight="bold" fontSize="xl">
-          {postTitle}
-        </Text>
-        <Text>{new Date(date).toLocaleDateString()}</Text>
-      </VStack>
-      <Text>{`>`}</Text>
-    </HStack>
+    <VStack w="full" bg="gray.800" p="8" align="flex-start">
+      <Text fontSize="4xl" color="cyan.500" fontWeight="bold">
+        {number}
+      </Text>
+      <Text fontWeight="bold" fontSize="xl">
+        {title}
+      </Text>
+      <Text>{description}</Text>
+    </VStack>
   );
 };
