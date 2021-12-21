@@ -11,7 +11,7 @@ import { Header } from "../../components/organisms/Header";
 import { IPostRes } from "../../interfaces";
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 
-export const PageHome = ({ posts }: { posts: IPostRes[] }) => {
+export const PageHome = () => {
   const { push } = useRouter();
   const onNavigateTo = (url: string) => {
     push(url);
