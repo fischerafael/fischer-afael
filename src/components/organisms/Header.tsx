@@ -11,6 +11,7 @@ export const Header = () => {
       </Text>
       <HStack spacing="8">
         <CustomLink href="/">Home</CustomLink>
+        <CustomLink href="/projects">Projects</CustomLink>
         <CustomLink href="/blog">Blog</CustomLink>
         <CustomLink href="/about">About</CustomLink>
       </HStack>
