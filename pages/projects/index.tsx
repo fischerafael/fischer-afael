@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async () => {
     return { ...repo, cover: getCover(repo.full_name) };
   });
 
-  return { props: { repos: reposWithCover || [] } };
+  return { props: { repos: reposWithCover || [] }, revalidate: 60 };
 };
 
 const getPortfolioRepos = (repos: IGithubRepo[]) => {

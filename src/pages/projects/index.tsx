@@ -10,7 +10,6 @@ interface Props {
 }
 
 export const PageProjects = ({ repos }: Props) => {
-  console.log("repos", repos);
   const { push } = useRouter();
 
   return (
